@@ -1,0 +1,31 @@
+# Rule Reference
+# https://github.com/airbnb/javascript
+
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "prefer-const": 2,
+    "no-const-assign": 2,
+    "no-var": 2,
+    "no-array-constructor": 1,
+    "no-new-object": 1,
+    "object-shorthand": 1,
+    "quote-props": [1, "as-needed"],
+    "prefer-template": 1,
+    "no-loop-func": 2,
+    "no-param-reassign": 2,
+    "prefer-arrow-callback": 1,
+    "arrow-spacing": 1,
+    "indent": [1, 2, {"SwitchCase": 1}],
+    "space-before-blocks": 1,
+    "space-after-keywords": 1,
+    "comma-dangle": [1, "always-multiline"],
+    "camelcase": 1,
+    "no-dupe-keys": 1,
+  }
+}

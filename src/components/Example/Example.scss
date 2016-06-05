@@ -1,0 +1,33 @@
+@import "~styles/includes/_mixin";
+
+.comp-example {
+
+  .input-text {
+    padding: 5px;
+    outline: none;
+  }
+
+  .button-add {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    &:active {
+      background: #e6e6e6;
+    }
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+    > li {
+      padding: 5px;
+      border-bottom: 1px dotted #aaa;
+      cursor: pointer;
+      &:hover {
+        color: red;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

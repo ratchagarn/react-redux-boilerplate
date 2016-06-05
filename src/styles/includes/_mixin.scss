@@ -1,0 +1,68 @@
+/**
+ * -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ * Mixin - for help your life
+ * -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ */
+
+/**
+ * clearfix
+ * --------------------------------------------------------
+ * usage:
+ * @include clearfix();
+ */
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Display triangle by CSS
+ * http://blackbe.lt/useful-sass-mixins-css-trangle/
+ * ----------------------------------------------------------
+ * @param {string}  direction of triangle.
+ * @param {string}  number of size with unit.
+ * @param {string}  color for triangle.
+ *
+ * usage:
+ * @include triangle('down', 8px, black);
+ */
+@mixin triangle($dir, $size, $color) {
+  display: inline-block;
+  border: $size transparent solid;
+
+  @if ($dir == "top" or $dir == "up") {
+      border-bottom-color: $color;
+  }
+  @else if ($dir == "right" or $dir == "after") {
+      border-left-color: $color;
+  }
+  @else if ($dir == "bottom" or $dir == "down") {
+      border-top-color: $color;
+  }
+  @else if ($dir == "left" or $dir == "before") {
+      border-right-color: $color;
+  }
+}
+
+/**
+ * Better than `visibility: hidden`
+ * ----------------------------------------------------------
+ * usage:
+ * @include visuallyhidden();
+ */
+@mixin visuallyhidden() {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+}
